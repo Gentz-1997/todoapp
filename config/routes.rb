@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'todos/new'
+  root 'home#top'
   get 'home/top'
   resources :todos
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

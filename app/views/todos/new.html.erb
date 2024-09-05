@@ -1,0 +1,16 @@
+<head>
+  <title>TO DO</title>
+  <% content_for :js do%>
+    <%= javascript_import_module_tag "todos/new"%>
+  <% end %>
+</head>
+
+<div class="max-w-max mx-auto">
+  <h1 class="text m-4 px-4 py-2 text-center font-bold text-4xl flex">やるべきことを記録しよう</h1>
+  <textarea id="text" class="w-full m-4 px-4 py-2 rounded-lg"></textarea>
+  <div class="flex items-center justify-between">
+    <span id="message" class="text-green-300 opacity-0 transition-opacity duration-500">保存しました</span>
+    <%# <button id="clear" class="px-2 py-1 bg-slate-300 border rounded-md shadow-sm hover:opacity-80 transition duration-500 active:translate-y-1">削除</button> %>
+    <button id="save" class="px-2 py-1 bg-slate-300 border rounded-md shadow-sm hover:opacity-80 transition duration-500 active:translate-y-1">保存</button>
+  </div>
+</div>

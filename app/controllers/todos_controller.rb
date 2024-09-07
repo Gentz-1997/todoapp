@@ -1,12 +1,19 @@
 class TodosController < ApplicationController
 
   def index
-  end
-
-  def new
+    @todos = Todo.all.order(content: :desc)
   end
 
   def show
-    @todos = Todo.find_by(id: params[:id])
+    @todo = Todo.find_by(id: params[:id])
+  end
+
+  def new
+    @todo = Todo.new
+  end
+
+  def create
+    Todo.create(content: params[:string])
+    redirect_to todos_path
   end
 end

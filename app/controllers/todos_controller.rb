@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
 
   def index
+    @todos = Todo.all.order(content: :desc)
   end
 
   def show

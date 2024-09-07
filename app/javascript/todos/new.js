@@ -7,11 +7,11 @@
   // const clear = document.querySelector('#clear')
   
   
-  if (localStorage.getItem('string') === null) {
-    text.value = '';
-  } else {
-    text.value = localStorage.getItem('string');
-  };
+  // if (localStorage.getItem('string') === null) {
+  //   text.value = '';
+  // } else {
+  //   text.value = localStorage.getItem('string');
+  // };
 
   save.addEventListener('click', () => {
     localStorage.setItem('string', text.value);

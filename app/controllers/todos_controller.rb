@@ -1,5 +1,4 @@
 class TodosController < ApplicationController
-
   def index
     @todos = Todo.all.order(content: :desc)
   end
@@ -13,7 +12,12 @@ class TodosController < ApplicationController
   end
 
   def create
-    Todo.create(content: params[:string])
-    redirect_to todos_path
+    @todo = Todo.create(content: params[:todo][:content])
+    if @todo.save
+      flash[:notice] = "タスクを作成しました"
+      redirect_to todos_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 end

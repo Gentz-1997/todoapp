@@ -1,6 +1,6 @@
 <div class="w-full">
   <div class="px-5 py-8 bg-white overflow-hidden shadow-lg">
-      <h1 class="font-bold text-4xl text-center mb-8 pb-10">タスク一覧</h1>
+      <h1 class="text-4xl text-center mb-8 pb-10">タスク一覧</h1>
       <div class="flex flex-col text-center">
         <% @todos.each do |todo| %>
           <%= link_to todo.content, todo_path(todo) , class: "inline-block w-full h-10 my-3 text-xl border-gray-300"%>

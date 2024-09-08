@@ -1,3 +1,6 @@
-<div>
-  <%= simple_format(@todo.content) %>
+<div class="">
+  <%= simple_format(@todo.content, class: "text-xl") %>
+  <button>
+    <%= link_to "編集", edit_todo_path %>
+  </button>
 </div>

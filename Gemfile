@@ -69,3 +69,5 @@ end
 gem "tailwindcss-rails", "~> 2.7"
 
 gem 'devise'
+
+gem 'pg'
